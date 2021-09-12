@@ -8,7 +8,7 @@ export default function Neo(props) {
 
     return (
         <>
-            <h2 className="user-select-none">Asteroids near earth on {date}</h2>
+            <h2 className="user-select-none">Asteroids near Earth on {date}</h2>
             <div style={{marginTop:'20px',}}>
                 <Asteroids />
             </div>

@@ -14,6 +14,10 @@ const icon = L.icon({
 });
 
 export default function Satellite(props) {
+    useEffect(() => {
+        document.title = 'Satellite Visuallization';
+    }, []);
+
     const [error, setError] = useState(null);
     const [preservedResult, setPreservedResult] = useState(null);
     const [loaded, setLoaded] = useState(false);

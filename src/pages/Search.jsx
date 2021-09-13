@@ -1,8 +1,12 @@
 import React, { useEffect, useState } from 'react';
 
-export default function Search(props) {
+export default function Search(props) {  
     const queryParams = new URLSearchParams(window.location.search);
     const query = queryParams.get('query');
+
+    useEffect(() => {
+      document.title = `Search results for ${query}`;
+    }, []);
 
     const [error, setError] = useState(null);
     const [isLoaded, setIsLoaded] = useState(false);

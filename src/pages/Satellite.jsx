@@ -58,8 +58,7 @@ export default function Satellite(props) {
         return (
             <>
                 <button
-                    className="btn btn-primary btn-sm"
-                    style={{ boxShadow: "none",backgroundColor: "var(--outline)",borderColor: "var(--outline)",}}
+                    className="my-btn"
                     onClick={loadMoreSatellite}
                 >
                     Load more satellite data

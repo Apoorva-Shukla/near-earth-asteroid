@@ -1,0 +1,20 @@
+{
+    "1": {
+        "prev": null,
+        "next": "Satellite Visualization",
+        "prevRoute": null,
+        "nextRoute": "/sv"
+    },
+    "2": {
+        "prev": "Introduction",
+        "next": "Near Earth Asteroids",
+        "prevRoute": "/introduction",
+        "nextRoute": "/neo"
+    },
+    "3": {
+        "prev": "Near Earth Asteroids",
+        "next": null,
+        "prevRoute": "/sv",
+        "nextRoute": null
+    }
+}

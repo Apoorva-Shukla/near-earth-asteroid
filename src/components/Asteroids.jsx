@@ -50,12 +50,12 @@ export default function Asteroids(props) {
         return <>
             {items.map((elem, index) => (
                 <div key={index} className="asteroid_box">
-                    <h5 className="mb-2"><span className="user-select-none text-primary">Name </span>{elem['name']}</h5>
-                    <h5 className="mb-2"><span className="user-select-none text-primary">Close approach to earth </span>{elem['close_approach_data'][0].close_approach_date_full.split(' ')[1]}</h5>
-                    <h5 className="mb-2"><span className="user-select-none text-primary">Miss distance </span>{elem['close_approach_data'][0].miss_distance.kilometers} KM</h5>
-                    <h5 className="mb-2"><span className="user-select-none text-primary">Orbiting body </span>{elem['close_approach_data'][0].orbiting_body}</h5>
+                    <h5 className="mb-2"><span className="user-select-none text-success fw-bold">Name </span>{elem['name']}</h5>
+                    <h5 className="mb-2"><span className="user-select-none text-success fw-bold">Close approach to earth </span>{elem['close_approach_data'][0].close_approach_date_full.split(' ')[1]}</h5>
+                    <h5 className="mb-2"><span className="user-select-none text-success fw-bold">Miss distance </span>{elem['close_approach_data'][0].miss_distance.kilometers} KM</h5>
+                    <h5 className="mb-2"><span className="user-select-none text-success fw-bold">Orbiting body </span>{elem['close_approach_data'][0].orbiting_body}</h5>
                     <div className="mb-2">
-                        <h5 className="user-select-none text-primary mb-0">Relative velocity</h5>
+                        <h5 className="user-select-none text-success fw-bold mb-0">Relative velocity</h5>
                         <div>
                             <span className="d-block">{elem['close_approach_data'][0].relative_velocity.kilometers_per_hour} KM/HOUR</span>
                             <span className="d-block"></span>
@@ -69,9 +69,9 @@ export default function Asteroids(props) {
                             <span className="d-block"></span>
                         </div>
                     </div>
-                    <h5 className="mb-2"><span className="user-select-none text-primary">Is potential threat </span>{elem['is_potentially_hazardous_asteroid'] === true ? 'Yes' : 'No'}</h5>
-                    <h5 className="mb-2"><span className="user-select-none text-primary">Estimated diameter (max.) </span>{elem.estimated_diameter.kilometers.estimated_diameter_max} KM</h5>
-                    <h5 className="mb-0"><span className="user-select-none text-primary">Estimated diameter (min.) </span>{elem.estimated_diameter.kilometers.estimated_diameter_min} KM</h5>
+                    <h5 className="mb-2"><span className="user-select-none text-success fw-bold">Is potential threat </span>{elem['is_potentially_hazardous_asteroid'] === true ? 'Yes' : 'No'}</h5>
+                    <h5 className="mb-2"><span className="user-select-none text-success fw-bold">Estimated diameter (max.) </span>{elem.estimated_diameter.kilometers.estimated_diameter_max} KM</h5>
+                    <h5 className="mb-0"><span className="user-select-none text-success fw-bold">Estimated diameter (min.) </span>{elem.estimated_diameter.kilometers.estimated_diameter_min} KM</h5>
                 </div>
             ))}
             {spinner === true && <div className="text-center"><div className="spinner-border my-auto" role="status" aria-hidden="true"></div></div>}

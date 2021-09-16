@@ -20,36 +20,46 @@ function App() {
                 <Header />
                 <div className="container mt-3">
                     <Wish />
-                    <Switch>
-                        <Route path="/" exact component={Satellite} />
-                        <Route path="/near-earth-asteroids" exact component={Neo} />
-                        <Route path="/introduction">
-                            <div className="d-flex">
-                                <Sidebar index={1} />
-                                <div style={{marginLeft:'20px',flex:1,}}>
-                                    <Introduction sidebar={true} index={1} />
-                                </div>
-                            </div>
-                        </Route>
-                        <Route path="/sv">
-                            <div className="d-flex">
-                                <Sidebar index={2} />
-                                <div style={{marginLeft:'20px',flex:1,}}>
-                                    <SatelliteDoc sidebar={true} index={2} />
-                                </div>
-                            </div>
-                        </Route>
-                        <Route path="/neo">
-                            <div className="d-flex">
-                                <Sidebar index={3} />
-                                <div style={{marginLeft:'20px',flex:1,}}>
-                                    <NeoDoc sidebar={true} index={3} />
-                                </div>
-                            </div>
-                        </Route>
-                        <Route path="/search" component={Search} />
-                    </Switch>
                 </div>
+                <Switch>
+                    <Route path="/" exact>
+                        <Satellite />
+                    </Route>
+                    <Route path="/near-earth-asteroids" exact>
+                        <div className="container mt-3">
+                            <Neo />
+                        </div>
+                    </Route>
+                    <Route path="/introduction">
+                        <div className="d-flex container mt-3">
+                            <Sidebar index={1} />
+                            <div style={{ marginLeft: '20px', flex: 1, }}>
+                                <Introduction sidebar={true} index={1} />
+                            </div>
+                        </div>
+                    </Route>
+                    <Route path="/sv">
+                        <div className="d-flex container mt-3">
+                            <Sidebar index={2} />
+                            <div style={{ marginLeft: '20px', flex: 1, }}>
+                                <SatelliteDoc sidebar={true} index={2} />
+                            </div>
+                        </div>
+                    </Route>
+                    <Route path="/neo">
+                        <div className="d-flex container mt-3">
+                            <Sidebar index={3} />
+                            <div style={{ marginLeft: '20px', flex: 1, }}>
+                                <NeoDoc sidebar={true} index={3} />
+                            </div>
+                        </div>
+                    </Route>
+                    <Route path="/search">
+                        <div className="container mt-3">
+                            <Search />
+                        </div>
+                    </Route>
+                </Switch>
             </HashRouter>
         </>
     );

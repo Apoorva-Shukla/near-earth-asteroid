@@ -8,7 +8,7 @@ export default function Asteroids(props) {
     const [preservedResult, setPreservedResult] = useState(null);
 
     const date = new Date();
-    const APIURL = `https://api.nasa.gov/neo/rest/v1/feed?start_date=${date.getFullYear()}-${date.getMonth()+1}-${date.getUTCDate()}&end_date=${date.getFullYear()}-${date.getMonth()+1}-${date.getUTCDate()}&api_key=IU3twfK408KpQRQJcSqRZiRUjhePdIX8PZNfM5dK`;
+    const APIURL = `https://api.nasa.gov/neo/rest/v1/feed?start_date=${date.getFullYear()}-${date.getMonth()+1}-${date.getUTCDate()}&end_date=${date.getFullYear()}-${date.getMonth()+1}-${date.getUTCDate()}&api_key=u61cW5ITGUb60F3sBz1mSB6jle3u4PIHr7S7zKwS`;
     const LIMIT = 5;
 
     useEffect(() => {
